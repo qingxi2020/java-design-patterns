@@ -26,17 +26,26 @@ package com.iluwatar.composite;
 import java.util.List;
 
 /**
+ * 句子
  * Sentence.
  */
 public class Sentence extends LetterComposite {
 
   /**
    * Constructor.
+   * 把每一个单词添加到children中
    */
   public Sentence(List<Word> words) {
     words.forEach(this::add);
   }
 
+  public Sentence(Word... words) {
+    for (Word word : words) {
+      this.add(word);
+    }
+  }
+
+  // 句子结尾添加.
   @Override
   protected void printThisAfter() {
     System.out.print(".");

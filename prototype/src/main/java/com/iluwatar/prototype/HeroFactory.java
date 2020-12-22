@@ -25,6 +25,7 @@ package com.iluwatar.prototype;
 
 /**
  * Interface for the factory class.
+ * 返回值是具体的对象，工厂方法
  */
 public interface HeroFactory {
 

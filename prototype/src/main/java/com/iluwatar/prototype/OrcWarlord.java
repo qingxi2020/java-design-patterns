@@ -25,6 +25,7 @@ package com.iluwatar.prototype;
 
 /**
  * OrcWarlord.
+ * 兽人军阀
  */
 public class OrcWarlord extends Warlord {
 

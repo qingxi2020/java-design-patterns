@@ -28,10 +28,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * 具体的产品类型
+ * 兽人铁匠
  * Concrete subclass for creating new objects.
  */
 public class OrcBlacksmith implements Blacksmith {
 
+  // 兽人兵工厂
   private static final Map<WeaponType, OrcWeapon> ORCARSENAL;
 
   static {

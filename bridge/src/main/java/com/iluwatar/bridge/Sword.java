@@ -27,32 +27,38 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
+ * 剑
  * Sword.
  */
 public class Sword implements Weapon {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(Sword.class);
 
+  // 武器持有附魔对象
   private final Enchantment enchantment;
 
+  // 构造函数传入初始化附魔成员变量
   public Sword(Enchantment enchantment) {
     this.enchantment = enchantment;
   }
 
   @Override
   public void wield() {
+    // 剑正在挥舞
     LOGGER.info("The sword is wielded.");
     enchantment.onActivate();
   }
 
   @Override
   public void swing() {
+    // 剑正在摆动
     LOGGER.info("The sword is swinged.");
     enchantment.apply();
   }
 
   @Override
   public void unwield() {
+    // 剑被卸下
     LOGGER.info("The sword is unwielded.");
     enchantment.onDeactivate();
   }

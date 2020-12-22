@@ -27,10 +27,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * 既是组合接口也是容器，当LetterComposite的子类中children为空时，不产生递归调用
+ * 组合接口
  * Composite interface.
  */
 public abstract class LetterComposite {
 
+  // 对于leeter子类来说，children是空的
   private final List<LetterComposite> children = new ArrayList<>();
 
   public void add(LetterComposite letter) {
@@ -49,9 +52,16 @@ public abstract class LetterComposite {
 
   /**
    * Print.
+   * 当LetterComposite的子类中children为空时，不产生递归调用
+   * children.forEach为递归调用，这里递归终止的条件(base case)是children的长度为空
+   * 在LetterComposite的实现类中，只有Letter的children成员变量为空
+   * 这里相当于是后序遍历
    */
   public void print() {
     printThisBefore();
+    // LetterComposite::print 表示方法引用符
+    // 匿名内部类、lambda表达式、方法引用符
+    // 这一块产生递归调用
     children.forEach(LetterComposite::print);
     printThisAfter();
   }

@@ -26,7 +26,9 @@ package com.iluwatar.iterator.bst;
 /**
  * TreeNode Class, representing one node in a Binary Search Tree. Allows for a generically typed
  * value.
+ * 树节点，表示一个二叉搜索树，允许使用泛型类型
  *
+ * <T extends Comparable<T>> 受限泛型，受限泛型只需要定义一次
  * @param <T> generically typed to accept various data types for the val property
  */
 public class TreeNode<T extends Comparable<T>> {
@@ -78,6 +80,7 @@ public class TreeNode<T extends Comparable<T>> {
 
   /**
    * Fetch the Parent TreeNode for a given value to insert into the BST.
+   * 获取给定值的父节点以插入到BST中
    *
    * @param valToInsert Value of the new TreeNode to be inserted
    * @return Parent TreeNode of `valToInsert`

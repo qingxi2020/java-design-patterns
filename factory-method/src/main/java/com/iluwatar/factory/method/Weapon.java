@@ -24,6 +24,9 @@
 package com.iluwatar.factory.method;
 
 /**
+ * 产品接口
+ * 武器接口
+ * 武器接口可以被实例化成任何实现了武器接口的具体武器，这也即是产品接口的作用
  * Weapon interface.
  */
 public interface Weapon {

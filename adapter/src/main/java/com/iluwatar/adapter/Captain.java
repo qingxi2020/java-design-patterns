@@ -24,6 +24,8 @@
 package com.iluwatar.adapter;
 
 /**
+ * 设计模式要点一：客户端，客户端依赖客户端接口的内容
+ * 船长，适配器模式中的客户端，船长只能使用划艇
  * The Captain uses {@link RowingBoat} to sail. <br> This is the client in the pattern.
  */
 public final class Captain {

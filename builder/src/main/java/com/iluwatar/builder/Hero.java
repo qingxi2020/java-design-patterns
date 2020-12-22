@@ -35,6 +35,8 @@ public final class Hero {
   private final Armor armor;
   private final Weapon weapon;
 
+  // 构造器一般作为构造函数的参数传入
+  // 避免伸缩构造器反模式出现，即构造器参数列表很长
   private Hero(Builder builder) {
     this.profession = builder.profession;
     this.name = builder.name;
@@ -71,6 +73,7 @@ public final class Hero {
   @Override
   public String toString() {
 
+    // var适用于局部变量
     var sb = new StringBuilder();
     sb.append("This is a ")
         .append(profession)
@@ -98,6 +101,8 @@ public final class Hero {
 
   /**
    * The builder class.
+   * 静态类，可以通过类名直接调用
+   * Build类为构造器模式，使用构造器模式创建产品
    */
   public static class Builder {
 
@@ -119,6 +124,7 @@ public final class Hero {
       this.name = name;
     }
 
+    // 链式编程，返回值是对象本身
     public Builder withHairType(HairType hairType) {
       this.hairType = hairType;
       return this;
@@ -139,6 +145,7 @@ public final class Hero {
       return this;
     }
 
+    // 传入的参数是对象本身
     public Hero build() {
       return new Hero(this);
     }

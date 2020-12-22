@@ -28,14 +28,18 @@ package com.iluwatar.builder;
  */
 public enum Armor {
 
+  // 枚举常量默认是public static final类型，但不允许修饰符修饰
   CLOTHES("clothes"), LEATHER("leather"), CHAIN_MAIL("chain mail"), PLATE_MAIL("plate mail");
 
   private final String title;
 
-  Armor(String title) {
+  // 枚举的构造方法只允许private方法
+  // 因为枚举被设计成单例模式，即枚举类型会由JVM在加载的时候，实例化枚举对象
+  private Armor(String title) {
     this.title = title;
   }
 
+  // 因为这里要打印title，所以需要设计额外的有参构造器
   @Override
   public String toString() {
     return title;

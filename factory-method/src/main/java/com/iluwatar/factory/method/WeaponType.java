@@ -24,6 +24,7 @@
 package com.iluwatar.factory.method;
 
 /**
+ * 武器类型枚举
  * WeaponType enumeration.
  */
 public enum WeaponType {

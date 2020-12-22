@@ -48,6 +48,7 @@ public class App {
   public static void main(String[] args) {
 
     // simple troll
+    // 一个看起来很简单的巨魔走近
     LOGGER.info("A simple looking troll approaches.");
     var troll = new SimpleTroll();
     troll.attack();

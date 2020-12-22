@@ -24,13 +24,14 @@
 package com.iluwatar.bridge;
 
 /**
+ * 附魔结构
  * Enchantment.
  */
 public interface Enchantment {
-
+  // 启动附魔
   void onActivate();
-
+  // 应用附魔
   void apply();
-
+  // 取消附魔
   void onDeactivate();
 }

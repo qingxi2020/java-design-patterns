@@ -26,15 +26,23 @@ package com.iluwatar.iterator.list;
 import com.iluwatar.iterator.Iterator;
 
 /**
+ * 具体的迭代器，根据集合的元素的类型分组遍历集合
  * TreasureChestItemIterator.
  */
 public class TreasureChestItemIterator implements Iterator<Item> {
 
+  /**
+   * 需要迭代遍历的集合
+   */
   private final TreasureChest chest;
   private int idx;
+  /**
+   * 需要遍历的集合元素类型
+   */
   private final ItemType type;
 
   /**
+   * 构造函数中初始化final修饰的成员变量
    * Constructor.
    */
   public TreasureChestItemIterator(TreasureChest chest, ItemType type) {
@@ -57,6 +65,10 @@ public class TreasureChestItemIterator implements Iterator<Item> {
     return null;
   }
 
+  /**
+   * 根据元素的类型获取下一个元素
+   * @return
+   */
   private int findNextIdx() {
     var items = chest.getItems();
     var tempIdx = idx;

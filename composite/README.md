@@ -13,6 +13,8 @@ tags:
 Compose objects into tree structures to represent part-whole hierarchies. Composite lets clients 
 treat individual objects and compositions of objects uniformly.
 
+将对象组合成树状结构以表示部分-整体层次结构。Composite允许客户端统一处理单个对象和对象的组合。
+
 ## Explanation
 
 Real world example
@@ -20,10 +22,14 @@ Real world example
 > Every sentence is composed of words which are in turn composed of characters. Each of these 
 > objects is printable and they can have something printed before or after them like sentence always 
 > ends with full stop and word always has space before it.
+>
+> 每一个句子都是由每一个字轮流组成的。这些对象中的每一个都是可打印的，它们可以在它们前面或后面打印一些内容，比如句子总是以句号结尾，单词前面总是有空格。
 
 In plain words
 
 > Composite pattern lets clients treat the individual objects in a uniform manner.
+>
+> 复合模式使客户能够以统一的方式对待各个对象。
 
 Wikipedia says
 
@@ -32,11 +38,16 @@ Wikipedia says
 > an object. The intent of a composite is to "compose" objects into tree structures to represent 
 > part-whole hierarchies. Implementing the composite pattern lets clients treat individual objects 
 > and compositions uniformly.
+>
+> 在软件工程中，复合模式是一种分区设计模式。复合模式描述了一组对象将以与单个对象实例相同的方式进行处理。复合的目的是将对象“组合”成树结构，以表示部分-整体层次结构。
+> 实现复合模式可以让客户机统一地处理单个对象和组合。
 
 **Programmatic Example**
 
 Taking our sentence example from above. Here we have the base class `LetterComposite` and the 
 different printable types `Letter`, `Word` and `Sentence`. 
+
+以上面的句子为例。这里我们有基本类LetterComposite和不同的可打印类型字母、单词和句子。
 
 ```java
 public abstract class LetterComposite {

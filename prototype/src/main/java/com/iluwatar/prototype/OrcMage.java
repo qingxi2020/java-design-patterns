@@ -25,6 +25,7 @@ package com.iluwatar.prototype;
 
 /**
  * OrcMage.
+ * 兽人法师
  */
 public class OrcMage extends Mage {
 

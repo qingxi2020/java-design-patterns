@@ -28,6 +28,7 @@ package com.iluwatar.abstractfactory;
  */
 public interface KingdomFactory {
 
+  // 工厂方法，生产具体的产品
   Castle createCastle();
 
   King createKing();

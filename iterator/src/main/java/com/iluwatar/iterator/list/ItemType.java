@@ -28,6 +28,12 @@ package com.iluwatar.iterator.list;
  */
 public enum ItemType {
 
+  /**
+   * ANY 表示任何宝物
+   * WEAPON 表示武器
+   * RING 表示戒指
+   * POTION 表示药剂
+   */
   ANY, WEAPON, RING, POTION
 
 }

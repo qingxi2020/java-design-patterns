@@ -34,6 +34,7 @@ class AppTest {
 
   @Test
   void shouldExecuteWithoutException() {
+    // 未抛出异常测试通过
     assertDoesNotThrow(() -> App.main(new String[]{}));
   }
 }

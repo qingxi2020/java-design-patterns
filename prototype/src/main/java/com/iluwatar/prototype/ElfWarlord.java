@@ -25,6 +25,7 @@ package com.iluwatar.prototype;
 
 /**
  * ElfWarlord.
+ * 精灵军阀
  */
 public class ElfWarlord extends Warlord {
 

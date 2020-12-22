@@ -27,12 +27,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
+ * 锤子
  * Hammer.
  */
 public class Hammer implements Weapon {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(Hammer.class);
 
+  // 武器持有附魔对象
   private final Enchantment enchantment;
 
   public Hammer(Enchantment enchantment) {

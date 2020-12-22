@@ -24,6 +24,9 @@
 package com.iluwatar.adapter;
 
 /**
+ * 设计模式要点二：客户端依赖的客户端接口
+ * 划艇
+ * 在适配器模式中，船长本来使用的是划艇，有了渔船适配器，船长可以使用渔船
  * The interface expected by the client.<br> A rowing boat is rowed to move.
  */
 public interface RowingBoat {

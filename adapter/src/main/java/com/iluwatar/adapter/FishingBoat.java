@@ -28,6 +28,8 @@ import static org.slf4j.LoggerFactory.getLogger;
 import org.slf4j.Logger;
 
 /**
+ * 渔船，设备类，适配器模式的适应者。想重用这个类，渔船通过航行移动
+ * final修饰类不可以被继承
  * Device class (adaptee in the pattern). We want to reuse this class. Fishing boat moves by
  * sailing.
  */
@@ -36,6 +38,7 @@ final class FishingBoat {
   private static final Logger LOGGER = getLogger(FishingBoat.class);
 
   void sail() {
+    // 渔船正在航行
     LOGGER.info("The fishing boat is sailing");
   }
 

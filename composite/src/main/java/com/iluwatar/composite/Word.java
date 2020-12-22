@@ -26,12 +26,15 @@ package com.iluwatar.composite;
 import java.util.List;
 
 /**
+ * 单词
  * Word.
  */
 public class Word extends LetterComposite {
 
   /**
    * Constructor.
+   * 构造函数，传入列表
+   * word把letter添加到children
    */
   public Word(List<Letter> letters) {
     letters.forEach(this::add);
@@ -39,6 +42,7 @@ public class Word extends LetterComposite {
 
   /**
    * Constructor.
+   * 传入可变参数
    * @param letters to include
    */
   public Word(char... letters) {
@@ -47,6 +51,7 @@ public class Word extends LetterComposite {
     }
   }
 
+  // 在单词前面加空格
   @Override
   protected void printThisBefore() {
     System.out.print(" ");

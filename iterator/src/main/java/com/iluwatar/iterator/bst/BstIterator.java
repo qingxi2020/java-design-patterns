@@ -31,6 +31,7 @@ import java.util.NoSuchElementException;
  * An in-order implementation of a BST Iterator. For example, given a BST with Integer values,
  * expect to retrieve TreeNodes according to the Integer's natural ordering (1, 2, 3...)
  *
+ * 实现接口时需要指定接口的泛型
  * @param <T> This Iterator has been implemented with generic typing to allow for TreeNodes of
  *            different value types
  */
@@ -51,6 +52,7 @@ public class BstIterator<T extends Comparable<T>> implements Iterator<TreeNode<T
    * @param node TreeNode that acts as root of the subtree we're interested in.
    */
   private void pushPathToNextSmallest(TreeNode<T> node) {
+    // DFS遍历二叉树
     while (node != null) {
       pathStack.push(node);
       node = node.getLeft();
@@ -79,6 +81,7 @@ public class BstIterator<T extends Comparable<T>> implements Iterator<TreeNode<T
       throw new NoSuchElementException();
     }
     var next = pathStack.pop();
+    // 一个元素出队列，把右子树押入队列
     pushPathToNextSmallest(next.getRight());
     return next;
   }

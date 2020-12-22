@@ -27,6 +27,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
+ * 飞行附魔
  * FlyingEnchantment.
  */
 public class FlyingEnchantment implements Enchantment {
@@ -35,16 +36,19 @@ public class FlyingEnchantment implements Enchantment {
 
   @Override
   public void onActivate() {
+    // 物品开始发出微弱的光
     LOGGER.info("The item begins to glow faintly.");
   }
 
   @Override
   public void apply() {
+    // 该物品飞走并击中了敌人，最终回到了主人的手中
     LOGGER.info("The item flies and strikes the enemies finally returning to owner's hand.");
   }
 
   @Override
   public void onDeactivate() {
+    // 物品的光晕消失
     LOGGER.info("The item's glow fades.");
   }
 }

@@ -35,6 +35,7 @@ public class SimpleTroll implements Troll {
 
   @Override
   public void attack() {
+    // 巨魔尝试去抓住你
     LOGGER.info("The troll tries to grab you!");
   }
 
@@ -45,6 +46,7 @@ public class SimpleTroll implements Troll {
 
   @Override
   public void fleeBattle() {
+    // 巨魔惊恐地尖叫着跑开了
     LOGGER.info("The troll shrieks in horror and runs away!");
   }
 }

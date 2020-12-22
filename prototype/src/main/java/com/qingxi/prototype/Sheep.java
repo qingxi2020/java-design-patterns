@@ -1,0 +1,21 @@
+package com.qingxi.prototype;
+
+/**
+ * 单例模式
+ * java实现原型设计模式有两种方式，实现Cloneable接口
+ * 或者覆写Object类的clone()方法
+ */
+public class Sheep implements Cloneable {
+    private String name;
+    public Sheep(String name) { this.name = name; }
+    public void setName(String name) { this.name = name; }
+    public String getName() { return name; }
+    @Override
+    public Sheep clone() {
+        try {
+            return (Sheep)super.clone();
+        } catch(CloneNotSupportedException e) {
+            throw new InternalError();
+        }
+    }
+}

@@ -35,6 +35,8 @@ import com.iluwatar.iterator.list.TreasureChest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.List;
+
 /**
  * The Iterator pattern is a design pattern in which an iterator is used to traverse a container and
  * access the container's elements. The Iterator pattern decouples algorithms from containers.
@@ -42,16 +44,22 @@ import org.slf4j.LoggerFactory;
  * <p>In this example the Iterator ({@link Iterator}) adds abstraction layer on top of a collection
  * ({@link TreasureChest}). This way the collection can change its internal implementation without
  * affecting its clients.
+ * 迭代器设计模式的核心在于两点：1、集合提供获取集合元素的方法 2、 有具体的迭代器对象进行遍历集合
+ * 1、 集合本身并不提供遍历集合的方法，但是集合提供获取集合元素的方法
+ * 2、 迭代器实现遍历集合的具体方法，获取迭代器对象的有两种方法，第一种是集合类的公开方法返回迭代器对象，第二种是将集合传入迭代器对象
  */
 public class App {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
-
+  /**
+   * TREASURE_CHEST是静态变量，属于类的，不需要实例化类即可使用
+   */
   private static final TreasureChest TREASURE_CHEST = new TreasureChest();
 
   private static void demonstrateTreasureChestIteratorForType(ItemType itemType) {
     LOGGER.info("------------------------");
     LOGGER.info("Item Iterator for ItemType " + itemType + ": ");
+    // 通过迭代器对象遍历集合
     var itemIterator = TREASURE_CHEST.iterator(itemType);
     while (itemIterator.hasNext()) {
       LOGGER.info(itemIterator.next().toString());

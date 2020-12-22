@@ -35,6 +35,9 @@ import org.junit.jupiter.api.Test;
  * and implemented by child classes, or implemented in a base class and optionally overridden by
  * derived classes—rather than by calling a constructor.
  *
+ * Factory方法是一种创造性的设计模式，它使用Factory方法来处理创建对象的问题，而不指定将要创建的对象的确切类。
+ * 这是通过调用工厂方法来实现的，工厂方法可以在接口中指定并由子类实现，或者在基类中实现，并且可以由派生类重写，而不是通过调用构造函数来实现。
+ *
  * <p>Factory produces the object of its liking.
  * The weapon {@link Weapon} manufactured by the blacksmith depends on the kind of factory
  * implementation it is referring to.

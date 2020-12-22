@@ -25,6 +25,7 @@ package com.iluwatar.prototype;
 
 /**
  * OrcBeast.
+ * 兽人兽
  */
 public class OrcBeast extends Beast {
 

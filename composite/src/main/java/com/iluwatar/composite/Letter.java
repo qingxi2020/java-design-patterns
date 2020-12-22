@@ -24,6 +24,7 @@
 package com.iluwatar.composite;
 
 /**
+ * 字母
  * Letter.
  */
 public class Letter extends LetterComposite {
@@ -34,6 +35,7 @@ public class Letter extends LetterComposite {
     this.character = c;
   }
 
+  // Letter把printThisBefore覆写掉，打印了字母本身
   @Override
   protected void printThisBefore() {
     System.out.print(character);

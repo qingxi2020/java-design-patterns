@@ -24,17 +24,24 @@
 package com.iluwatar.adapter;
 
 /**
+ * 设计模式要点三：适配器，适配器实现客户端接口同时封装了服务对象，这里的服务对象是渔船，因为船长最终使用的是渔船
+ * 适配器类，将渔船适配成划艇，将渔船适配成划艇，只需要知道划艇的一些接口信息
+ * 适配器类实现了划艇接口，相当于给渔船套了一层壳
  * Adapter class. Adapts the interface of the device ({@link FishingBoat}) into {@link RowingBoat}
  * interface expected by the client ({@link Captain}).
  */
 public class FishingBoatAdapter implements RowingBoat {
 
+  // 真正的服务对象
   private final FishingBoat boat;
 
   public FishingBoatAdapter() {
     boat = new FishingBoat();
   }
 
+  // final修饰的类不可以被覆写
+  // 适配器实现了客户端接口。适配器接受客户端通过适配器接口发起的调用， 并将其转换为适用于被封装服务对象的调用。
+  @Override
   public final void row() {
     boat.sail();
   }

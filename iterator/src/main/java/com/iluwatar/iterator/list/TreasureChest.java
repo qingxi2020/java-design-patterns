@@ -28,13 +28,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * 宝库，代表集合类
  * TreasureChest, the collection class.
  */
 public class TreasureChest {
 
+  /**
+   * final修饰成员变量必须手动赋值，不会给默认值
+   * final修饰成员变量必须手动赋值，要么直接赋值，要么通过构造方法赋值，二选一
+   * 必须保证所有重载的构造方法，都会对final的成员变量进行赋值
+   */
   private final List<Item> items;
 
   /**
+   * 构造函数中初始化final修饰的成员变量
    * Constructor.
    */
   public TreasureChest() {
@@ -51,11 +58,18 @@ public class TreasureChest {
         new Item(ItemType.WEAPON, "Dagger of poison"));
   }
 
+  /**
+   * this关键字在这里表示本类对象
+   * @param itemType
+   * @return 返回值是迭代器对象
+   */
   public Iterator<Item> iterator(ItemType itemType) {
     return new TreasureChestItemIterator(this, itemType);
   }
 
   /**
+   * 集合必须提供一个获取集合元素的方法
+   * 得到所有的元素，List是一个接口，无法直接new实例化
    * Get all items.
    */
   public List<Item> getItems() {

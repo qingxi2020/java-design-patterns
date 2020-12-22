@@ -12,6 +12,8 @@ tags:
 
 Ensure a class only has one instance, and provide a global point of access to it.
 
+确保一个类只有一个实例，并提供对其的全局访问点。
+
 
 ## Explanation
 
@@ -19,22 +21,30 @@ Real world example
 
 > There can only be one ivory tower where the wizards study their magic. The same enchanted ivory 
 > tower is always used by the wizards. Ivory tower here is singleton.
+>
+> 只有一座象牙塔是巫师们学习魔法的地方。巫师们总是用同样的魔法象牙塔。象牙塔是单身汉。
 
 In plain words
 
 > Ensures that only one object of a particular class is ever created.
+>
+> 确保只创建特定类的一个对象。
 
 Wikipedia says
 
 > In software engineering, the singleton pattern is a software design pattern that restricts the 
 > instantiation of a class to one object. This is useful when exactly one object is needed to 
 > coordinate actions across the system.
+>
+> 在软件工程中，单例模式是一种将类实例化为一个对象的软件设计模式。当只需要一个对象来协调整个系统的操作时，这很有用。
 
 **Programmatic Example**
 
 Joshua Bloch, Effective Java 2nd Edition p.18
 
 > A single-element enum type is the best way to implement a singleton
+>
+> 单元素枚举类型是实现singleton的最佳方法
 
 ```java
 public enum EnumIvoryTower {
@@ -64,8 +74,11 @@ Use the Singleton pattern when
 ## Typical Use Case
 
 * The logging class
+* 日志记录类
 * Managing a connection to a database
+* 管理与数据库的连接
 * File manager
+* 文件管理器
 
 ## Real world examples
 

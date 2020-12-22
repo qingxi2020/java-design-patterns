@@ -25,6 +25,7 @@ package com.iluwatar.prototype;
 
 /**
  * ElfBeast.
+ * 精灵兽
  */
 public class ElfBeast extends Beast {
 
@@ -34,11 +35,21 @@ public class ElfBeast extends Beast {
     this.helpType = helpType;
   }
 
+  /**
+   * 给copy方法服务
+   * 要实现原型设计模式，一般需要实现参数是类对象的构造函数
+   * @param elfBeast
+   */
   public ElfBeast(ElfBeast elfBeast) {
     super(elfBeast);
     this.helpType = elfBeast.helpType;
   }
 
+  /**
+   * 最终实现了接口中的方法
+   * 实现了原型的设计模式
+   * @return
+   */
   @Override
   public ElfBeast copy() {
     return new ElfBeast(this);

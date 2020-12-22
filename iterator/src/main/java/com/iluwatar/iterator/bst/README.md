@@ -4,6 +4,8 @@ An implementation of the Iterator design pattern, for the Binary Search Tree dat
 explanation of BSTs can be found in this 
 [video tutorial](https://www.youtube.com/watch?v=i_Q0v_Ct5lY).
 
+一个迭代器设计模式的实现，用于二叉搜索树的数据结构。关于BSTs的一个很好的解释可以在这里找到
+
 ### What It Does
 
 This iterator assumes that the given binary search tree inserts nodes of smaller 
@@ -11,6 +13,8 @@ value to the left, and nodes of larger value to the right of current node. Accor
 this iterator will return nodes according to "In Order" binary tree traversal. 
 This means that given a binary search tree like the following, the iterator would 
 return values in order: 1, 3, 4, 6, 7, 8, 10, 13, 14. 
+
+这个迭代器假设给定的二叉搜索树在当前节点的左侧插入值较小的节点，在当前节点的右侧插入值较大的节点。因此，这个迭代器将按照“按顺序”二叉树遍历返回节点。这意味着给定如下二叉搜索树，迭代器将按顺序返回值：1、3、4、6、7、8、10、13、14。
 
 ![BST](../../../../../../../etc/bst.jpg "Binary Search Tree")  
 

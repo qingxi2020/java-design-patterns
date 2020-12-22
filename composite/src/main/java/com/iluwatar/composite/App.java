@@ -49,6 +49,7 @@ public class App {
   public static void main(String[] args) {
     LOGGER.info("Message from the orcs: ");
 
+    // new即在调用构造函数
     var orcMessage = new Messenger().messageFromOrcs();
     orcMessage.print();
 

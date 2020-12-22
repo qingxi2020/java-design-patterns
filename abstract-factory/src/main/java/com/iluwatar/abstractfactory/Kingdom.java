@@ -55,6 +55,8 @@ public class Kingdom {
 
   /**
    * The factory of kingdom factories.
+   * 国王工厂的工厂，这个类是抽象工厂
+   * 静态内部类可以通过外部类名直接访问
    */
   public static class FactoryMaker {
 
@@ -67,6 +69,7 @@ public class Kingdom {
 
     /**
      * The factory method to create KingdomFactory concrete objects.
+     * 或者说这个方法是抽象工厂
      */
     public static KingdomFactory makeFactory(KingdomType type) {
       switch (type) {

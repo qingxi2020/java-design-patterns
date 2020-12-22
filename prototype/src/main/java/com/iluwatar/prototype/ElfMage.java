@@ -25,6 +25,7 @@ package com.iluwatar.prototype;
 
 /**
  * ElfMage.
+ * 精灵法师
  */
 public class ElfMage extends Mage {
 

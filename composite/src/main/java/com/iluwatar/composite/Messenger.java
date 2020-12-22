@@ -30,6 +30,7 @@ import java.util.List;
  */
 public class Messenger {
 
+  // 没有权限修饰符属于默认权限
   LetterComposite messageFromOrcs() {
 
     var words = List.of(

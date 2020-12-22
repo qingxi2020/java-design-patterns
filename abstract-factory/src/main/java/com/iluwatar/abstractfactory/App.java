@@ -80,7 +80,9 @@ public class App implements Runnable {
    * @param kingdomType type of Kingdom
    */
   public void createKingdom(final Kingdom.FactoryMaker.KingdomType kingdomType) {
+    // 抽象工厂创建了具体的工厂，这个工厂用来产生王国的各个组建
     final KingdomFactory kingdomFactory = Kingdom.FactoryMaker.makeFactory(kingdomType);
+    // kingdom是成员变量， 抽象工厂创建了具体的工厂，就可以设置具体的工厂
     kingdom.setKing(kingdomFactory.createKing());
     kingdom.setCastle(kingdomFactory.createCastle());
     kingdom.setArmy(kingdomFactory.createArmy());

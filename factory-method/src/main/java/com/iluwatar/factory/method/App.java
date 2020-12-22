@@ -41,6 +41,7 @@ import org.slf4j.LoggerFactory;
  */
 public class App {
 
+  // 打印日志记录的库
   private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
 
   private final Blacksmith blacksmith;

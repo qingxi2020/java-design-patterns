@@ -28,14 +28,18 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * 创建具体的产品
+ * 精灵铁匠
  * Concrete subclass for creating new objects.
  */
 public class ElfBlacksmith implements Blacksmith {
 
+  // ELFARSENAL 小精灵兵工厂
   private static final Map<WeaponType, ElfWeapon> ELFARSENAL;
 
   static {
     ELFARSENAL = new HashMap<>(WeaponType.values().length);
+    // lambda表达式
     Arrays.stream(WeaponType.values()).forEach(type -> ELFARSENAL.put(type, new ElfWeapon(type)));
   }
 

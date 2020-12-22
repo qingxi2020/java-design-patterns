@@ -35,16 +35,19 @@ public class SoulEatingEnchantment implements Enchantment {
 
   @Override
   public void onActivate() {
+    // 该物品散布嗜血的味道
     LOGGER.info("The item spreads bloodlust.");
   }
 
   @Override
   public void apply() {
+    // 该物品吞噬了敌人的灵魂。
     LOGGER.info("The item eats the soul of enemies.");
   }
 
   @Override
   public void onDeactivate() {
+    // 嗜血慢慢消失
     LOGGER.info("Bloodlust slowly disappears.");
   }
 }

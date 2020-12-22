@@ -43,6 +43,7 @@ public class HeroFactoryImpl implements HeroFactory {
 
   /**
    * Create mage.
+   * 调用原型方法
    */
   public Mage createMage() {
     return mage.copy();
@@ -50,6 +51,7 @@ public class HeroFactoryImpl implements HeroFactory {
 
   /**
    * Create warlord.
+   * 调用原型方法
    */
   public Warlord createWarlord() {
     return warlord.copy();
@@ -57,6 +59,7 @@ public class HeroFactoryImpl implements HeroFactory {
 
   /**
    * Create beast.
+   * 调用原型方法
    */
   public Beast createBeast() {
     return beast.copy();

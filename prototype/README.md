@@ -14,28 +14,38 @@ tags:
 Specify the kinds of objects to create using a prototypical instance, and create new objects by 
 copying this prototype.
 
+指定要使用原型实例创建的对象的种类，并通过复制此原型来创建新对象。
 ## Explanation
 
 First it should be noted that Prototype pattern is not used to gain performance benefits. It's only 
 used for creating new objects from prototype instance.
+
+首先应该注意，原型模式不用于获得性能优势。 它仅用于从原型实例创建新对象。
 
 Real world example
 
 > Remember Dolly? The sheep that was cloned! Lets not get into the details but the key point here is 
 > that it is all about cloning.
 
+
 In plain words
 
 > Create object based on an existing object through cloning.
+>
+>通过克隆基于现有对象创建对象。
 
 Wikipedia says
 
 > The prototype pattern is a creational design pattern in software development. It is used when the 
 > type of objects to create is determined by a prototypical instance, which is cloned to produce new 
 > objects.
+>
+>原型模式是软件开发中的一种创新设计模式。 当要创建的对象类型由原型实例确定时使用，该实例实例被克隆以生成新对象。
 
 In short, it allows you to create a copy of an existing object and modify it to your needs, instead 
 of going through the trouble of creating an object from scratch and setting it up.
+
+简而言之，它使您可以创建现有对象的副本并根据需要对其进行修改，而不必麻烦地从头创建对象并进行设置。
 
 **Programmatic Example**
 

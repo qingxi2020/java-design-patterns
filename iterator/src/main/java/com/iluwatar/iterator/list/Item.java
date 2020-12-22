@@ -24,6 +24,7 @@
 package com.iluwatar.iterator.list;
 
 /**
+ * 集合中存放的项目
  * Item.
  */
 public class Item {
@@ -45,6 +46,14 @@ public class Item {
     return type;
   }
 
+  /**
+   * final修饰方法，表示这个方法是最终方法，不能被覆写
+   * 对于方法，abstract和final不能同时出现
+   *
+   * 引申：final修饰类，表示这个类不能有任何子类
+   * 对于类，abstract和final不能同时出现
+   * @param type
+   */
   public final void setType(ItemType type) {
     this.type = type;
   }

@@ -24,14 +24,25 @@
 package com.iluwatar.decorator;
 
 /**
+ * 巨魔接口
  * Interface for trolls.
  */
 public interface Troll {
 
+  /**
+   * 攻击
+   */
   void attack();
 
+  /**
+   * 得到攻击力量
+   * @return
+   */
   int getAttackPower();
 
+  /**
+   * 徒手攻击
+   */
   void fleeBattle();
 
 }
